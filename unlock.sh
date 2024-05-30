@@ -1,7 +1,12 @@
 #!/bin/bash
 
 json_content='{
-  "registry-mirrors" : [
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "10m",
+    "max-file": "3"
+  },
+  "registry-mirrors": [
     "https://mirror.gcr.io",
     "https://daocloud.io",
     "https://c.163.com",
